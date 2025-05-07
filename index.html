@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toki Exchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Toki Exchange Platform 💰</h1>
+
+    <div id="login" class="card">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button> <!-- updated -->
+    </div>
+
+    <div id="profile" class="card" style="display:none;">
+      <h3>Welcome <span id="user-email"></span></h3>
+      <p>Your Toki Balance: <span id="balance">0</span> 🪙</p>
+
+      <button onclick="completeTask()">Complete Task (Earn 10 TOKI)</button>
+
+      <h4>Approve Task for Another User</h4>
+      <input type="text" id="other-user-id" placeholder="Enter UID or Email">
+      <button onclick="approveTask()">Approve Task (Send 10 TOKI)</button>
+      
+      <button onclick="logout()" class="logout">Logout</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
